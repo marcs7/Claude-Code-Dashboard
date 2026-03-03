@@ -1,0 +1,13 @@
+node_modules/
+.git/
+.env
+.env.*
+tasks/
+archive/
+*.md
+prd.json
+progress.txt
+ralph.sh
+.github/
+.dockerignore
+app/

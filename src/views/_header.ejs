@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title + ' — ' : '' %>CC Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Meridian gradient line -->
+  <div class="meridian-line"></div>
+
+  <!-- Dot grid texture -->
+  <div class="dot-grid"></div>
+
+  <!-- Atmosphere gradients -->
+  <div class="atmosphere"></div>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <a href="/" class="logo-group">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <circle cx="12" cy="12" r="5" stroke="#e05a40" stroke-width="1.5" fill="none"/>
+            <circle cx="12" cy="12" r="1.5" fill="#e05a40"/>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-title">CC Dashboard</span>
+          <span class="logo-subtitle">conversation archive</span>
+        </div>
+      </a>
+      <div class="nav-stats">
+        <div id="globalStats" class="nav-stats-text"></div>
+        <div class="nav-status">
+          <span class="nav-status-dot"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">

@@ -1,0 +1,21 @@
+services:
+  cc-dashboard:
+    build: .
+    container_name: cc-dashboard
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8502}:${APP_PORT:-8502}"
+    volumes:
+      - ${CLAUDE_HOST_PATH}:/data/claude:rw
+    mem_limit: 512m
+    environment:
+      - CLAUDE_DATA_DIR=${CLAUDE_DATA_DIR:-/data/claude}
+      - PORT=${APP_PORT:-8502}
+      - NODE_ENV=${NODE_ENV:-production}
+      - FORCE_HTTPS=${FORCE_HTTPS:-false}
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
